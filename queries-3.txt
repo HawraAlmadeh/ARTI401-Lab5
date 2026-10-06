@@ -1,0 +1,12 @@
+37 ?- mother(X, maggie).
+X = marge ;
+false.
+
+38 ?- mother(X, homber).
+X = mona .
+
+39 ?- father(X, bart).
+X = homber .
+
+40 ?- father(X, herb).
+X = abraham 
