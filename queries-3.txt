@@ -10,3 +10,114 @@ X = homber .
 
 40 ?- father(X, herb).
 X = abraham 
+
+
+41 ?- grandfather(x, maggie).
+false.
+
+42 ?- grandfather(X, maggie).
+X = abraham ;
+X = clancy ;
+false.
+
+43 ?- daughter(X, marge).
+X = lisa ;
+X = maggie ;
+false.
+
+44 ?- daughter(X, ling).
+false.
+
+45 ?- daughter(ling, X).
+X = selma.
+
+
+46 ?- son(X, abraham).
+X = herb ;
+X = homber ;
+false.
+
+47 ?- son(patty, X).
+X = clancy ;
+X = jackie.
+
+48 ?- cousin(lisa, X).
+X = bart .
+
+49 ?- cousin(X, ling).
+X = bart ;
+X = bart ;
+X = lisa ;
+X = lisa ;
+X = maggie ;
+X = maggie ;
+X = ling ;
+X = ling.
+
+
+50 ?- ancestor(X, abraham).
+X = herb ;
+X = homber ;
+X = bart ;
+X = lisa ;
+X = maggie ;
+false.
+
+51 ?- ancestor(X, jackie).
+X = marge ;
+X = patty ;
+X = selma ;
+X = bart ;
+X = lisa ;
+X = maggie ;
+X = ling ;
+false.
+
+
+52 ?- ancle(X, bart).
+Correct to: "uncle(X,bart)"? 
+Please answer 'y' or 'n'? yes
+X = herb .
+
+53 ?- uncle(X, ling).
+X = patty ;
+X = patty ;
+false.
+
+54 ?- aunt(X, maggie).
+X = marge ;
+X = marge ;
+X = selma ;
+X = selma ;
+false.
+
+
+55 ?- aunt(selma, X).
+X = bart ;
+X = bart ;
+X = lisa ;
+X = lisa ;
+X = maggie ;
+X = maggie ;
+X = ling ;
+X = ling.
+
+56 ?- brother(patty, X).
+X = marge ;
+X = patty ;
+X = selma ;
+X = marge ;
+X = patty ;
+X = selma.
+
+
+57 ?- sister(lisa, X).
+X = bart ;
+X = lisa ;
+X = maggie ;
+X = bart ;
+X = lisa ;
+X = maggie.
+
+58 ?- sister(ling, bart).
+false.
